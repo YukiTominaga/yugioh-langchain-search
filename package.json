@@ -5,12 +5,14 @@
   "license": "MIT",
   "scripts": {
     "start": "tsc && node src/main",
-    "start:dev": "node --no-warnings=ExperimentalWarning --loader ts-node/esm/transpile-only src/main.ts"
+    "start:google": "node --no-warnings=ExperimentalWarning --loader ts-node/esm/transpile-only src/main.ts",
+    "start:elasticsearch": "node --no-warnings=ExperimentalWarning --loader ts-node/esm/transpile-only src/elasticsearch.ts"
   },
   "dependencies": {
-    "@google-cloud/storage": "^7.3.1",
-    "google-auth-library": "^9.0.0",
-    "langchain": "^0.0.171"
+    "@elastic/elasticsearch": "^8.10.0",
+    "@google-cloud/storage": "^6.10.1",
+    "google-auth-library": "^8.9.0",
+    "langchain": "^0.0.183"
   },
   "type": "module",
   "devDependencies": {
@@ -19,7 +21,7 @@
     "eslint": "^8.47.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
-    "prettier": "2.8",
+    "prettier": "^3.0.0",
     "ts-node": "^10.9.1",
     "typescript": "^5.1.6"
   }
